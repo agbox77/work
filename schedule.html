@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание – Импорт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Дашборд</a>
+        <a href="schedule.html" class="active">Расписание</a>
+        <a href="documents.html">Документы</a>
+    </nav>
+    <main>
+        <h1>Расписание (МЭО и ОТТ)</h1>
+        <div class="upload-area">
+            <input type="file" id="excelUpload" accept=".xlsx, .xls">
+            <label for="excelUpload">Выберите Excel-файл (MASTER_table)</label>
+            <button id="loadSample">Загрузить пример</button>
+        </div>
+        <div id="scheduleTableContainer">
+            <!-- Динамическая таблица -->
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>
