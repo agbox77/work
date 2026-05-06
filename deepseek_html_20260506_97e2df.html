@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочее пространство – Дашборд</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Дашборд</a>
+        <a href="schedule.html">Расписание</a>
+        <a href="documents.html">Документы</a>
+    </nav>
+    <main>
+        <section id="calendar-section">
+            <h2>Календарь</h2>
+            <div id="calendar-controls">
+                <button id="prevMonth">←</button>
+                <span id="currentMonthYear"></span>
+                <button id="nextMonth">→</button>
+            </div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+        </section>
+        <section id="tasks-section">
+            <h2>Задачи на <span id="selectedDate"></span></h2>
+            <select id="taskCategory">
+                <option value="работа">Работа</option>
+                <option value="личное">Личное</option>
+                <option value="важное">Важное</option>
+                <option value="проект">Проект</option>
+            </select>
+            <input type="text" id="taskInput" placeholder="Новая задача...">
+            <button id="addTask">Добавить</button>
+            <ul id="taskList"></ul>
+        </section>
+        <section id="employees-section">
+            <h2>Сотрудники МЭО</h2>
+            <table id="meoTable" class="editable-table">
+                <thead><tr><th>ФИО</th><th>Дата рождения</th><th>Д.Тел</th><th>Моб.Тел</th><th></th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <button class="add-row" data-dept="МЭО">+ Добавить сотрудника МЭО</button>
+
+            <h2>Сотрудники ОТТ</h2>
+            <table id="ottTable" class="editable-table">
+                <thead><tr><th>ФИО</th><th>Дата рождения</th><th>Д.Тел</th><th>Моб.Тел</th><th></th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <button class="add-row" data-dept="ОТТ">+ Добавить сотрудника ОТТ</button>
+
+            <h2>Дизайнер</h2>
+            <table id="designerTable" class="editable-table">
+                <thead><tr><th>ФИО</th><th>Дата рождения</th><th>Д.Тел</th><th>Моб.Тел</th><th></th></tr></thead>
+                <tbody></tbody>
+            </table>
+            <button class="add-row" data-dept="ДИЗАЙНЕР">+ Добавить дизайнера</button>
+        </section>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
